@@ -85,7 +85,7 @@ main {
 .text {
   width: 22%;
   position: absolute;
-  right: 200px; }
+  right: 15%; }
   .text h1 {
     margin-bottom: 20px;
     font-size: 28px;
