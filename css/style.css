@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif; }
+
+.top {
+  display: flex;
+  width: 960px;
+  margin: 0 auto; }
+  .top .top--left {
+    width: 300px;
+    height: 100px;
+    margin-bottom: 50px;
+    margin-right: 0;
+    background-color: #ddd;
+    border-radius: 0 0 5px 5px; }
+  .top .top--right {
+    width: 620px;
+    height: 100px;
+    display: inline;
+    margin-left: 20px;
+    background-color: #ddd;
+    border-radius: 0 0 5px 5px; }
+
+main {
+  width: 960px;
+  min-height: 420px;
+  margin: 0 auto;
+  display: flex; }
+
+.slider {
+  width: 62%;
+  position: absolute;
+  left: 0; }
+  .slider .slider--top,
+  .slider .slider--bottom {
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden; }
+  .slider .slider--bottom {
+    width: 80%; }
+
+.slider--top__container,
+.slider--bottom__container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative; }
+  .slider--top__container img,
+  .slider--bottom__container img {
+    height: 200px;
+    position: relative;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 5px; }
+
+.controls {
+  position: absolute;
+  top: 220px;
+  right: 10px; }
+  .controls .controls--left {
+    background: url(../images/arrow-gray-left.png) no-repeat center center;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 5px; }
+    .controls .controls--left:hover {
+      background-image: url(../images/arrow-blue-left.png);
+      border-color: #144980; }
+  .controls .controls--right {
+    background: url(../images/arrow-gray-right.png) no-repeat center center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 5px; }
+    .controls .controls--right:hover {
+      background-image: url(../images/arrow-blue-right.png);
+      border-color: #144980; }
+
+.text {
+  width: 22%;
+  position: absolute;
+  right: 200px; }
+  .text h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #144980; }
+  .text p {
+    font-weight: 300; }
+
+.bottom-element {
+  height: 100px;
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 5px 5px 0 0;
+  background-color: #ddd; }

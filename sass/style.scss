@@ -1,0 +1,117 @@
+@mixin border-radius($radius) {
+      border-radius: $radius; }
+$blue: #144980;
+$grey: #ddd;
+$contentWidth: 960px;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+ }
+
+.top {
+  display: flex;
+  width: $contentWidth;
+  margin: 0 auto; 
+  .top--left {
+    width: 300px;
+    height: 100px;
+    margin-bottom: 50px;
+    margin-right: 0;
+    background-color: $grey;
+    @include border-radius(0 0 5px 5px); }
+  .top--right {
+    width: 620px;
+    height: 100px;
+    display: inline;
+    margin-left: 20px;
+    background-color: $grey;
+    @include border-radius(0 0 5px 5px); }
+  }
+
+main {
+  width: $contentWidth;
+  min-height: 420px;
+  margin: 0 auto;
+  display: flex; }
+
+.slider {
+  width: 62%;
+  position: absolute;
+  left: 0; 
+  .slider--top, 
+  .slider--bottom {
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden; }
+  .slider--bottom {
+    width: 80%; }
+  }
+
+.slider--top__container,
+.slider--bottom__container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative; 
+  img {
+    height: 200px;
+    position: relative;
+    width: auto;
+    margin-right: 10px;
+    @include border-radius(5px); }
+}
+
+.controls {
+  position: absolute;
+  top: 220px;
+  right: 10px; 
+  .controls--left {
+    background: url(../images/arrow-gray-left.png) no-repeat center center;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $grey;
+    cursor: pointer;
+    @include border-radius(5px);
+    &:hover {
+      background-image: url(../images/arrow-blue-left.png);
+      border-color: $blue; }
+   }
+  .controls--right {
+    background: url(../images/arrow-gray-right.png) no-repeat center center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $grey;
+    cursor: pointer;
+    @include border-radius(5px); 
+      &:hover {
+        background-image: url(../images/arrow-blue-right.png);
+        border-color: $blue; }
+  }
+}
+
+.text {
+  width: 22%;
+  position: absolute;
+  right: 200px; 
+  h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: $blue; }
+  p {
+    font-weight: 300; }
+}
+
+.bottom-element {
+  height: 100px;
+  width: $contentWidth;
+  margin: 0 auto;
+  margin-top: 50px;
+  @include border-radius(5px 5px 0 0);
+  background-color: $grey; }
